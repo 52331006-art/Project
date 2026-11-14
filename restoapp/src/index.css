@@ -1,8 +1,62 @@
-/* Global styles. Bootstrap handles typography, colors and spacing. */
+/* Global theme: colors, fonts and Bootstrap overrides. */
+
+:root {
+  /* Brand colors */
+  --brand: #1f4d3a;        /* cedar green */
+  --brand-dark: #163829;
+  --accent: #c8963e;       /* warm gold */
+  --accent-light: #e6bd6a; /* gold for text on dark green */
+  --accent-dark: #8a6220;  /* gold for text on cream */
+  --cream: #faf6ef;
+  --ink: #2b2420;
+  --muted: #6f655d;
+
+  --font-heading: 'Playfair Display', Georgia, serif;
+  --font-body: 'Poppins', system-ui, sans-serif;
+
+  /* Make Bootstrap use the theme */
+  --bs-body-bg: var(--cream);
+  --bs-body-color: var(--ink);
+  --bs-body-font-family: var(--font-body);
+}
 
 /* Full-height column so the footer stays at the bottom on short pages. */
 #root {
   min-height: 100svh;
   display: flex;
   flex-direction: column;
+}
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+}
+
+/* Theme buttons, built on Bootstrap's button variables */
+.btn-brand {
+  --bs-btn-color: #fff;
+  --bs-btn-bg: var(--brand);
+  --bs-btn-border-color: var(--brand);
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: var(--brand-dark);
+  --bs-btn-hover-border-color: var(--brand-dark);
+  --bs-btn-active-color: #fff;
+  --bs-btn-active-bg: var(--brand-dark);
+  --bs-btn-active-border-color: var(--brand-dark);
+  --bs-btn-focus-shadow-rgb: 31, 77, 58;
+}
+
+.btn-accent {
+  --bs-btn-color: var(--ink);
+  --bs-btn-bg: var(--accent);
+  --bs-btn-border-color: var(--accent);
+  --bs-btn-hover-color: var(--ink);
+  --bs-btn-hover-bg: var(--accent-light);
+  --bs-btn-hover-border-color: var(--accent-light);
+  --bs-btn-active-color: var(--ink);
+  --bs-btn-active-bg: var(--accent-light);
+  --bs-btn-active-border-color: var(--accent-light);
+  --bs-btn-focus-shadow-rgb: 200, 150, 62;
+  font-weight: 500;
 }

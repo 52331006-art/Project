@@ -1,0 +1,241 @@
+/* ---------- Navbar ---------- */
+.site-navbar {
+  --bs-navbar-color: rgba(255, 255, 255, 0.85);
+  --bs-navbar-hover-color: var(--accent-light);
+  --bs-navbar-active-color: var(--accent-light);
+  background: var(--brand);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.15);
+}
+
+.site-navbar .navbar-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.brand-icon {
+  color: var(--accent-light);
+}
+
+.site-navbar .nav-link {
+  position: relative;
+  font-weight: 500;
+}
+
+.site-navbar .navbar-toggler {
+  border: 0;
+  color: #fff;
+  font-size: 1.5rem;
+  line-height: 1;
+}
+
+/* Gold underline under the current page on desktop */
+@media (min-width: 992px) {
+  .site-navbar .nav-link.active::after {
+    content: '';
+    position: absolute;
+    left: var(--bs-navbar-nav-link-padding-x);
+    right: var(--bs-navbar-nav-link-padding-x);
+    bottom: 0.2rem;
+    height: 2px;
+    background: var(--accent-light);
+  }
+}
+
+.cart-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* ---------- Footer ---------- */
+.site-footer {
+  background: var(--brand-dark);
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.site-footer a {
+  color: rgba(255, 255, 255, 0.75);
+  text-decoration: none;
+}
+
+.site-footer a:hover {
+  color: var(--accent-light);
+}
+
+.footer-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #fff;
+}
+
+.footer-title {
+  color: #fff;
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+}
+
+.footer-links li + li,
+.footer-contact li + li {
+  margin-top: 0.5rem;
+}
+
+.footer-contact li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+}
+
+.footer-contact svg {
+  color: var(--accent-light);
+  flex-shrink: 0;
+  margin-top: 0.3rem;
+}
+
+.footer-social a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.footer-social a:hover {
+  background: var(--accent);
+  color: var(--ink);
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  font-size: 0.875rem;
+}
+
+/* ---------- Page header banner ---------- */
+.page-header {
+  padding: 4.5rem 0;
+  color: #fff;
+  background:
+    linear-gradient(rgba(22, 56, 41, 0.85), rgba(22, 56, 41, 0.85)),
+    url('/images/mezze-platter.jpg') center / cover;
+}
+
+.page-header h1 {
+  font-size: clamp(2.25rem, 6vw, 3.5rem);
+}
+
+.eyebrow {
+  color: var(--accent-light);
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+/* ---------- Menu filters ---------- */
+.filter-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1.1rem;
+  border: 1px solid var(--brand);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--brand);
+  font-weight: 500;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.filter-btn:hover {
+  background: rgba(31, 77, 58, 0.08);
+}
+
+.filter-btn.active {
+  background: var(--brand);
+  color: #fff;
+}
+
+.filter-btn:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 2px;
+}
+
+/* ---------- Dish cards ---------- */
+.dish-card {
+  border: 0;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 4px 16px rgba(43, 36, 32, 0.08);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.dish-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 28px rgba(43, 36, 32, 0.15);
+}
+
+.dish-img-wrap {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Crop dish photos to the same height so the cards line up. */
+.dish-img {
+  display: block;
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  transition: transform 0.4s;
+}
+
+.dish-card:hover .dish-img {
+  transform: scale(1.05);
+}
+
+.dish-price {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  padding: 0.3rem 0.8rem;
+  border-radius: 999px;
+  background: var(--accent);
+  color: var(--ink);
+  font-weight: 600;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.dish-category {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  color: var(--accent-dark);
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.dish-card .card-text {
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+/* Turn off movement for people who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .dish-card,
+  .dish-img {
+    transition: none;
+  }
+
+  .dish-card:hover,
+  .dish-card:hover .dish-img {
+    transform: none;
+  }
+}

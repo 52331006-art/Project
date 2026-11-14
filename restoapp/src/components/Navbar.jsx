@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { Link, NavLink } from 'react-router-dom'
+import { FaUtensils, FaShoppingCart, FaBars, FaTimes } from 'react-icons/fa'
 
 const links = [
   { to: '/', label: 'Home', end: true },
@@ -13,9 +14,10 @@ function Navbar() {
   const close = () => setOpen(false)
 
   return (
-    <nav className="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+    <nav className="navbar navbar-expand-lg navbar-dark site-navbar sticky-top">
       <div className="container">
-        <Link className="navbar-brand fw-bold" to="/" onClick={close}>
+        <Link className="navbar-brand" to="/" onClick={close}>
+          <FaUtensils className="brand-icon" />
           RestoApp
         </Link>
 
@@ -27,7 +29,7 @@ function Navbar() {
           aria-label="Toggle navigation"
           onClick={() => setOpen((o) => !o)}
         >
-          <span className="navbar-toggler-icon"></span>
+          {open ? <FaTimes /> : <FaBars />}
         </button>
 
         <div className={`collapse navbar-collapse${open ? ' show' : ''}`} id="mainNav">
@@ -41,10 +43,11 @@ function Navbar() {
             ))}
           </ul>
           <NavLink
-            className="btn btn-outline-light ms-lg-3 mb-2 mb-lg-0"
+            className="btn btn-accent cart-btn ms-lg-3 mb-2 mb-lg-0"
             to="/cart"
             onClick={close}
           >
+            <FaShoppingCart />
             Cart
           </NavLink>
         </div>
