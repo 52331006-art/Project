@@ -3,7 +3,7 @@
 > CSCI426: Advanced Web Programming — Project Phase 1 (Fall 2026)
 > Fadi Chami · 52331006
 
-**Live site:**  NOT LIVE YET
+**Live site:** NOT LIVE YET
 
 ## About the project
 
@@ -23,14 +23,14 @@ This is Phase 1 of the project, so it is front end only, built with React. Menu 
 
 ## Pages
 
-| Route | Page |
-|---|---|
-| `/` | Home |
-| `/about` | About |
-| `/menu` | Menu (dynamic) |
-| `/contact` | Contact |
-| `/cart` | Cart |
-| `/admin` | Admin |
+| Route      | Page           |
+| ---------- | -------------- |
+| `/`        | Home           |
+| `/about`   | About          |
+| `/menu`    | Menu (dynamic) |
+| `/contact` | Contact        |
+| `/cart`    | Cart           |
+| `/admin`   | Admin          |
 
 ## Technologies used
 
@@ -48,7 +48,7 @@ You need [Node.js](https://nodejs.org/) installed.
 
 ```bash
 git clone TODO-your-repo-url
-cd TODO-repo-name/restoapp
+cd .../restoapp
 npm install
 npm run dev
 ```
@@ -85,12 +85,12 @@ How to add the screenshots (remove these steps once the images are in place):
 4. Create a `screenshots/` folder next to this README and save each image with the file name used in the table below (for example `home-desktop.png` and `home-mobile.png`).
 5. Before taking the Cart screenshots, double-click a few dishes on the Menu page so the cart isn't empty.
 
-| Page | Desktop | Mobile |
-|---|---|---|
-| Home | ![Home](screenshots/home-desktop.png) | ![Home mobile](screenshots/home-mobile.png) |
-| Menu | ![Menu](screenshots/menu-desktop.png) | ![Menu mobile](screenshots/menu-mobile.png) |
-| Cart | ![Cart](screenshots/cart-desktop.png) | ![Cart mobile](screenshots/cart-mobile.png) |
-| About | ![About](screenshots/about-desktop.png) | ![About mobile](screenshots/about-mobile.png) |
+| Page    | Desktop                                     | Mobile                                            |
+| ------- | ------------------------------------------- | ------------------------------------------------- |
+| Home    | ![Home](screenshots/home-desktop.png)       | ![Home mobile](screenshots/home-mobile.png)       |
+| Menu    | ![Menu](screenshots/menu-desktop.png)       | ![Menu mobile](screenshots/menu-mobile.png)       |
+| Cart    | ![Cart](screenshots/cart-desktop.png)       | ![Cart mobile](screenshots/cart-mobile.png)       |
+| About   | ![About](screenshots/about-desktop.png)     | ![About mobile](screenshots/about-mobile.png)     |
 | Contact | ![Contact](screenshots/contact-desktop.png) | ![Contact mobile](screenshots/contact-mobile.png) |
 
 ## Credits
