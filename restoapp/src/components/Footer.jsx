@@ -1,26 +1,6 @@
 import { Link } from 'react-router-dom'
-import {
-  FaUtensils,
-  FaFacebookF,
-  FaInstagram,
-  FaWhatsapp,
-  FaMapMarkerAlt,
-  FaPhoneAlt,
-  FaRegClock,
-} from 'react-icons/fa'
-
-// Placeholder details: replace with the restaurant's real ones.
-const contact = {
-  address: 'Hamra Street, Beirut, Lebanon',
-  phone: '+961 1 234 567',
-  hours: 'Every day, 12:00 – 23:00',
-}
-
-const socials = [
-  { href: 'https://www.facebook.com', label: 'Facebook', Icon: FaFacebookF },
-  { href: 'https://www.instagram.com', label: 'Instagram', Icon: FaInstagram },
-  { href: 'https://www.whatsapp.com', label: 'WhatsApp', Icon: FaWhatsapp },
-]
+import { FaUtensils, FaMapMarkerAlt, FaPhoneAlt, FaRegClock } from 'react-icons/fa'
+import { contact, socials } from '../data/restaurant.js'
 
 function Footer() {
   const year = new Date().getFullYear()
@@ -51,6 +31,7 @@ function Footer() {
               <li><Link to="/about">About Us</Link></li>
               <li><Link to="/contact">Contact</Link></li>
               <li><Link to="/cart">Cart</Link></li>
+              <li><Link to="/admin">Manage Menu</Link></li>
             </ul>
           </div>
 

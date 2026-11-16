@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { Link, NavLink } from 'react-router-dom'
 import { FaUtensils, FaShoppingCart, FaBars, FaTimes } from 'react-icons/fa'
+import { useCart } from '../context/CartContext.js'
 
 const links = [
   { to: '/', label: 'Home', end: true },
@@ -12,6 +13,7 @@ const links = [
 function Navbar() {
   const [open, setOpen] = useState(false)
   const close = () => setOpen(false)
+  const { itemCount } = useCart()
 
   return (
     <nav className="navbar navbar-expand-lg navbar-dark site-navbar sticky-top">
@@ -49,6 +51,12 @@ function Navbar() {
           >
             <FaShoppingCart />
             Cart
+            {itemCount > 0 && (
+              <span className="cart-badge">
+                {itemCount}
+                <span className="visually-hidden"> items</span>
+              </span>
+            )}
           </NavLink>
         </div>
       </div>
