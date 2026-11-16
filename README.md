@@ -3,6 +3,8 @@
 > CSCI426: Advanced Web Programming — Project Phase 1 (Fall 2026)
 > Fadi Chami · 52331006
 
+**Repository:** https://github.com/52331006-art/Project
+
 **Live site:** NOT LIVE YET
 
 ## About the project
@@ -47,8 +49,8 @@ This is Phase 1 of the project, so it is front end only, built with React. Menu 
 You need [Node.js](https://nodejs.org/) installed.
 
 ```bash
-git clone TODO-your-repo-url
-cd .../restoapp
+git clone https://github.com/52331006-art/Project.git
+cd Project/restoapp
 npm install
 npm run dev
 ```
